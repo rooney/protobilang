@@ -27,7 +27,7 @@ expres : expres expres                             # apply
        | DECIMAL                                   # literal
        | QUOT string? UNQUOT                       # literal
        | COMMENT                                   # literal
-       | (op|var) COLON                            # wordkey
+       | (op|var)+ COLON                           # wordkey
        | COLON var?                                # keyword
        | DOT? var                                  # lookup
        | op                                        # lookup
